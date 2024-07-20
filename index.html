@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Silent's Portfolio a good site for taking programming courses. So you must want to visit it.">
+    <title>Silent's Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(2, 2, 31);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            top: 0;
+            position: sticky;
+            z-index: 1;
+            /* jis parent ke ander navigation lie kr rhi ho ussi ko stick krte hn  */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            /* justify-content: space-evenly; krne se ye equal space gain krlein ge har taragf se */
+            /* justify-content: space-around; krne se ye apne darmian equal space gain krlein ge*/
+            align-items: center;
+            height: 70px;
+            background-color: rgb(14 14 48);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color ease-in-out 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(104, 208, 240);
+        }
+
+        .left {
+            font-size: 1.2rem;
+        }
+
+        .left a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .firstsec {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 75px 0;
+        }
+
+        .firstsec>div {
+            /* .firstsec > div is tarha likhne se iss ke direct div's ko hi target kre ga bakion ko ni */
+            width: 36%;
+            /* width: 36%; krne ye apne parent ki 30% widht lele ga  */
+        }
+
+        .leftsec {
+            font-size: 2.5rem;
+        }
+
+
+        .leftsec .buttons {
+            padding: 10px 0;
+        }
+
+        .leftsec .btn {
+            padding: 10px;
+            background: #060628;
+            border-radius: 6px;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: background ease-in-out 0.4s;
+        }
+
+        .leftsec .btn:hover {
+            background: #181836;
+        }
+
+        .rightsec img {
+            width: 80%;
+        }
+
+        .purple {
+            color: #bf3bbf;
+        }
+
+        #element {
+            color: #f077f0;
+        }
+
+        .secondsec {
+            max-width: 80vw;
+            margin: auto;
+            /* margin: auto; iss section ko center mai lekr aaye ga */
+            /* height: 80vh; */
+            margin-bottom: 400px;
+        }
+
+        main hr {
+            border: 0;
+            background-color: #4f4f8d;
+            height: 0.4px;
+            margin: 60px 84px;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .secondsec h1 {
+            font-size: 1.9rem;
+            line-height: 6rem;
+        }
+
+        .secondsec .box {
+            background: white;
+            width: 79vw;
+            height: 2px;
+            margin: 56px 0px;
+            display: flex;
+            /* display: flex; krne se isss ke ander ki sari items eik line mai aa jai gi */
+        }
+
+        .secondsec .vertical-line {
+            background: white;
+            width: 1px;
+            height: 93px;
+            margin: 0 7.5vw;
+            /* iss tarha ye div dusre div's se margin le ga na ke apne ander ke div's se margin le ga  */
+        }
+
+        .img-top {
+            width: 28px;
+            position: relative;
+            top: -33px;
+            left: -10px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 0.74rem;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: rgb(16, 16, 22);
+            /* height: 233px; */
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer h3 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer>div {
+            /* .footer > div{ footer ke ander jo direct div hn unn ko target kr ke width set ki hai take sare div's ki width same ho jai  */
+            width: 223px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul a {
+            text-decoration: none;
+            color: white;
+            transition: all ease-in-out 0.27s;
+        }
+
+        .footer ul a:hover {
+            text-transform: uppercase;
+            padding-left: 2px;
+            color: rgb(104, 208, 240);
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .hr {
+            margin-top: 10px;
+            border: 0;
+            background-color: white;
+            height: 1.8px;
+            margin: 0 420px;
+        }
+
+        @media screen and (max-width: 1360px) {
+
+            body {
+                min-width: fit-content;
+                /* iss tarha se body sara content apne ander fit krle gi  */
+            }
+
+            nav {
+                flex-direction: column;
+                ;
+            }
+
+            .firstsec {
+                flex-direction: column-reverse;
+            }
+
+            .firstsec>div {
+                width: 700px;
+                text-align: center;
+            }
+
+            .leftsec {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* align-items: center; */
+                font-size: 2.5rem;
+            }
+
+            .rightsec {
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightsec img {
+                margin-bottom: 60px;
+            }
+
+            .secondsec {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* height: 140vh; */
+                margin-bottom: 700px
+            }
+
+            .secondsec .box {
+                flex-direction: column;
+                width: 45vw;
+            }
+
+            .box .vertical-line {
+                height: unset;
+            }
+
+            .img-top {
+                top: 119px;
+                left: -40px;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .secondsec{
+                margin-bottom: 1040px;
+                max-width: unset;
+            }
+            .secondsec .box {
+                width: 70vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left"><a href="index.html">Silent's Portfolio</a></div>
+            <div class="right">
+                <ul>
+                    <li class="item"><a href="index.html">Home</a></li>
+                    <li class="item"><a href="index.html">About</a></li>
+                    <li class="item"><a href="index.html">Services</a></li>
+                    <li class="item"><a href="index.html">Contact</a></li>
+                    <li class="item"><a href="index.html">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsec">
+            <div class="leftsec">
+                <div>Hi my name is <span class="purple">Silent Boy</span></div>
+                <div>and I am a passionate</div>
+                <div>
+                <span id="element"></span>
+            </div>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightsec">
+                <img src="images/download.png" alt="Developer img">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsec">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical-line">
+                    <img src="images/developer.png" alt="HTML Developer img" class="img-top">
+                    <div class="vertical-title">
+                        HTML Developer - Pinterest (2019 - 2020)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint libero deserunt consequatur,
+                        earum hic praesentium.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img src="images/freelancer.png" alt="HTML Developer img" class="img-top">
+                    <div class="vertical-title">
+                        HTML Developer - Freelancer (2020 - 2021)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint libero deserunt consequatur,
+                        earum hic praesentium.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img src="images/instagram.png" alt="HTML Developer img" class="img-top">
+                    <div class="vertical-title">
+                        HTML Developer - Intstagram (2021 - 2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint libero deserunt consequatur,
+                        earum hic praesentium.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img src="images/utube.png" alt="HTML Developer img" class="img-top">
+                    <div class="vertical-title">
+                        HTML Developer - Youtube (2022 - 2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint libero deserunt consequatur,
+                        earum hic praesentium.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img src="images/twiiter.png" alt="HTML Developer img" class="img-top">
+                    <div class="vertical-title">
+                        HTML Developer - Twitter (2023 - 2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint libero deserunt consequatur,
+                        earum hic praesentium.
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3><a href="#">Silent's Developer Portfolio</a></h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li class="links"><a href="#">Home</a></li>
+                    <li class="links"><a href="#">About</a></li>
+                    <li class="links"><a href="#">Services</a></li>
+                    <li class="links"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li class="links"><a href="#">Home</a></li>
+                    <li class="links"><a href="#">About</a></li>
+                    <li class="links"><a href="#">Services</a></li>
+                    <li class="links"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li class="links"><a href="#">Home</a></li>
+                    <li class="links"><a href="#">About</a></li>
+                    <li class="links"><a href="#">Services</a></li>
+                    <li class="links"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="footer-rights">
+            Copyright &#169; www.silentboy's.com | All rights reserved.
+        </div>
+    </footer>
+    <!-- hm ne ye github se copy kia hai or #element ka span jahan pr animation chalwani hai wahan add kra di hai copy krke -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Programmer', 'Video Editor', 'Graphic Designer', 'Content Writer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
